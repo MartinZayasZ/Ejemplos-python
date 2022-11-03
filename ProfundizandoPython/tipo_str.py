@@ -16,20 +16,30 @@ from mi_clase import MiClase
 
 
 # help(str.join)
-tupla_str = ('hola', 'mundo', 'universidad', 'python')
-mensaje = ' '.join(tupla_str)
-print(f'mensaje: {mensaje}')
+# tupla_str = ('hola', 'mundo', 'universidad', 'python')
+# mensaje = ' '.join(tupla_str)
+# print(f'mensaje: {mensaje}')
+#
+# lista_cursos = ['java', 'python', 'angular']
+# mensaje = ', '.join(lista_cursos)
+# print(f'mensaje: {mensaje}')
+#
+# cadena = 'holamundo'
+# mensaje = '.'.join(cadena)
+# print(f'mensaje: {mensaje}')
+#
+# diccionario = {'nombre':'Juan', 'apellido':'Perez', 'edad':'18'}
+# llaves = '-'.join(diccionario.keys())
+# valores = '-'.join(diccionario.values())
+# print(f'llaves: {llaves}')
+# print(f'valores: {valores}')
 
-lista_cursos = ['java', 'python', 'angular']
-mensaje = ', '.join(lista_cursos)
-print(f'mensaje: {mensaje}')
 
-cadena = 'holamundo'
-mensaje = '.'.join(cadena)
-print(f'mensaje: {mensaje}')
+# help(str.split)
+cursos = 'Java,Python,Angular,PHP'
+lista_cursos = cursos.split(',')
+print(f'Lista cursos: {lista_cursos}')
 
-diccionario = {'nombre':'Juan', 'apellido':'Perez', 'edad':'18'}
-llaves = '-'.join(diccionario.keys())
-valores = '-'.join(diccionario.values())
-print(f'llaves: {llaves}')
-print(f'valores: {valores}')
+cursos = 'Java,Python,Angular,PHP'
+lista_cursos = cursos.split(',', 2)
+print(f'Lista cursos: {lista_cursos}')
