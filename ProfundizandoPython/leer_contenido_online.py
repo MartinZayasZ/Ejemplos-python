@@ -16,11 +16,28 @@ req = urllib.request.Request(
 # with open('nuevo_archivo.txt', 'w', encoding='UTF-8') as archivo:
 #     archivo.write(contenido)
 
-palabras = []
-with urllib.request.urlopen(req) as mensaje:
-    for linea in mensaje:
-        palabras_por_linea = linea.decode('utf-8').split()
-        for palabra in palabras_por_linea:
-            palabras.append(palabra)
+# palabras = []
+# with urllib.request.urlopen(req) as mensaje:
+#     for linea in mensaje:
+#         palabras_por_linea = linea.decode('utf-8').split()
+#         for palabra in palabras_por_linea:
+#             palabras.append(palabra)
+#
+# print(len(palabras))
 
-print(len(palabras))
+with urllib.request.urlopen(req) as mensaje:
+    contenido = mensaje.read().decode('utf-8')
+
+print('Número de veces que aparece Universidad: ',contenido.count('Universidad'))
+
+# print(contenido.upper())
+# print(contenido.lower())
+
+#python
+print('Existe python?: ', 'python'.lower() in contenido.lower())
+
+
+# startwith - inicia con
+print(contenido.startswith('En GlobalMentoring'))
+# endswith - termina con
+print(contenido.endswith('Fundador de GlobalMentoring.com.mx'))
