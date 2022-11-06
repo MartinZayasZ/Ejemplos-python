@@ -56,3 +56,12 @@ print(pelo_negro.difference(ojos_cafe))
 # diferencia simétrica, pelo negro u ojos cafes pero no ambos (comutativa)
 print(pelo_negro.symmetric_difference(ojos_cafe))
 
+# Preguntar si un set está contenido en otro (subset)
+# revisamos si los elemento están contenidos en el segundo set
+print(menos_30.issubset(pelo_negro))
+# Preguntar si un set contiene a otro set (superset)
+# revisar si los elementos del primer set están contenidos en el segundo set
+print(menos_30.issuperset(pelo_negro))
+# disjoint, preguntar si los de pelo negro no tienen pelo rubio
+print(pelo_negro.isdisjoint(pelo_rubio))
+
