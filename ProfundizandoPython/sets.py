@@ -39,3 +39,20 @@ print(conjunto_copia)
 print(f'Es igual en conteido ?: {conjunto == conjunto_copia}')
 print(f'Es la misma referecia?: {conjunto is conjunto_copia}')
 
+# Operaciones de conjuntos con set
+# personas con distintas caracteristicas
+pelo_negro = {'Juan', 'Karla', 'Pedro', 'María'}
+pelo_rubio = {'Lorenzo', 'Laura', 'Marco'}
+ojos_cafe = {'Karla', 'Laura'}
+menos_30 = {'Juan', 'Karla', 'María'}
+# Todos con ojos cafe y pelo rubio(union) (no se repiten los elementos)
+print(ojos_cafe.union(pelo_rubio))
+# Invertir el orden con el mismo resultado (conmutativa)
+print(pelo_rubio.union(ojos_cafe))
+# Intersection, Sólo personas con ojos cafe y pelo rubio (conmutativa)
+print(ojos_cafe.intersection(pelo_rubio))
+# Difference, Pelo negro sin ojos cafe (no conmutativa)
+print(pelo_negro.difference(ojos_cafe))
+# diferencia simétrica, pelo negro u ojos cafes pero no ambos (comutativa)
+print(pelo_negro.symmetric_difference(ojos_cafe))
+
