@@ -4,12 +4,17 @@
 
 
 # función principal
+# def operacion(a, b):
+#     # definimos una función interna o anidada
+#     def sumar():
+#         return a + b
+#     # Retornar la función
+#     return sumar
+
+# función principal
 def operacion(a, b):
-    # definimos una función interna o anidada
-    def sumar():
-        return a + b
-    # Retornar la función
-    return sumar
+    # 1. Definimos una función lambda interna o anidada
+    return lambda: a+b
 
 mi_funcion_closure = operacion(5, 2)
 print(f'Resultado: {mi_funcion_closure()}')
