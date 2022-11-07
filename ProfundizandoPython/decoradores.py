@@ -10,13 +10,14 @@
 def funcion_decorador_a(funcion_a_decorar_b):
     def funcion_decorada_c(*args, **kwargs):
         print('Antes de ejecutar la función')
-        funcion_a_decorar_b(*args, **kwargs)
+        resultado = funcion_a_decorar_b(*args, **kwargs)
         print('Después de ejecutar la función')
+        return resultado
     return funcion_decorada_c
 
 @funcion_decorador_a
-def mostrar_mensaje():
-    print('Hola desde función mostrar mensaje')
+def sumar(a, b):
+    return a+b
 
-
-mostrar_mensaje()
+resultado = sumar(10, 5)
+print(f'Resultado: {resultado}')
