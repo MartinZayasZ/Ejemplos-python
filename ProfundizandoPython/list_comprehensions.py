@@ -38,3 +38,22 @@ lista_impares = []
 [lista_pares.append(numero) if numero%2==0 else lista_impares.append(numero) for numero in range(10)]
 print(f'Lista pares: {lista_pares}')
 print(f'Lista impares: {lista_impares}')
+
+# Lista de listas
+lista_listas = [[1,2,3], [4,5,6], [7,8,9,10]]
+# convertimos la lista de listas en una sola lista
+lista_simple = [valor for sublista in lista_listas for valor in sublista]
+print(f'Lista simple: {lista_simple}')
+
+# ahora creamos una lista de numeros pares a partir de la lisda de listas
+# sin list comprehensions
+lista_pares = []
+for sublista in lista_listas:
+    for valor in sublista:
+        if valor % 2 == 0:
+            lista_pares.append(valor)
+print(f'Lista pares sin list comprehensions: {lista_pares}')
+
+lista_pares = [valor for sublista in lista_listas for valor in sublista if valor%2==0]
+print(f'Lista pares con list comprehensions: {lista_pares}')
+
